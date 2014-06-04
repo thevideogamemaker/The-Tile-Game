@@ -12,6 +12,8 @@ public class ChangeTexturebottommiddle : MonoBehaviour {
 	bool isBeingTouched;
 	public AudioClip clank;
 	Animator anim;
+
+	public int currentArraySpace;
 	
 	// Use this for initialization
 	void Start () 
@@ -19,11 +21,49 @@ public class ChangeTexturebottommiddle : MonoBehaviour {
 		renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		anim = GetComponent<Animator> ();
 		isBeingTouched = false;
+		currentArraySpace = Random.Range (1, 9);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if(currentArraySpace == 1)
+		{
+			currentSpace.renderer.material = blocks[1];
+		}
+		if(currentArraySpace == 2)
+		{
+			currentSpace.renderer.material = blocks[2];
+		}
+		if(currentArraySpace == 3)
+		{
+			currentSpace.renderer.material = blocks[3];
+		}
+		if(currentArraySpace == 4)
+		{
+			currentSpace.renderer.material = blocks[4];
+		}
+		if(currentArraySpace == 5)
+		{
+			currentSpace.renderer.material = blocks[5];
+		}
+		if(currentArraySpace == 6)
+		{
+			currentSpace.renderer.material = blocks[6];
+		}
+		if(currentArraySpace == 7)
+		{
+			currentSpace.renderer.material = blocks[7];
+		}
+		if(currentArraySpace == 8)
+		{
+			currentSpace.renderer.material = blocks[8];
+		}
+		if(currentArraySpace == 9)
+		{
+			currentSpace.renderer.material = blocks[9];
+		}
+
 		if(isBeingTouched == true)
 		{
 			anim.SetBool("Switch",true);
@@ -38,12 +78,19 @@ public class ChangeTexturebottommiddle : MonoBehaviour {
 
 	void OnMouseDown ()
 	{
-			isBeingTouched = true;
-			audio.PlayOneShot (clank, 0.5f);
-			currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-			rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-			upSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-			leftSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
+		isBeingTouched = true;
+		audio.PlayOneShot (clank, 0.5f);
+		this.currentArraySpace = currentArraySpace + 1;
+
+		if(currentArraySpace == 10)
+		{
+			this.currentArraySpace = 1;
+
+		}
+		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
+		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
+		//upSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
+		//leftSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 	}
 
 	IEnumerator finishanimation ()
