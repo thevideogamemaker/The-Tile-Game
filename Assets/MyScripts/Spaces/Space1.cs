@@ -11,6 +11,8 @@ public class Space1 : MonoBehaviour {
 	bool isBeingTouched;
 	public AudioClip clank;
 	Animator anim;
+	Animator animS2;
+	Animator animS5;
 
 	public int currentArraySpace;
 
@@ -20,7 +22,7 @@ public class Space1 : MonoBehaviour {
 	void Start () 
 	{
 		//renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-		anim = GetComponent<Animator> ();
+		anim = GameObject.FindGameObjectWithTag("Space1").GetComponent<Animator> ();
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
 

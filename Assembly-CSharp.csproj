@@ -47,10 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MyScripts\CountUPtimer.cs" />
-     <Compile Include="Assets\MyScripts\GameWinController.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\Backbutton.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\ClassicsModebutton.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\MenuScript.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayGameScript.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\Settings.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\TimeChallengebutton.cs" />
+     <Compile Include="Assets\MyScripts\GameWinController1.cs" />
      <Compile Include="Assets\MyScripts\IOS\Tweetbutton.cs" />
      <Compile Include="Assets\MyScripts\IOS\iAd.cs" />
-     <Compile Include="Assets\MyScripts\MenuScript.cs" />
      <Compile Include="Assets\MyScripts\Pause\MoveMenuButton.cs" />
      <Compile Include="Assets\MyScripts\Pause\MoveSpacesOnPause.cs" />
      <Compile Include="Assets\MyScripts\Pause\PauseMenuDestroy.cs" />
