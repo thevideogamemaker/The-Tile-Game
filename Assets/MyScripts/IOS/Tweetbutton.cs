@@ -15,6 +15,6 @@ public class Tweetbutton : MonoBehaviour {
 
 	void OnMouseDown ()
 	{
-		Application.OpenURL ("www.twitter.com");
+		Application.OpenURL ("https://www.twitter.com");
 	}
 }
