@@ -54,7 +54,7 @@
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Settings.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\TimeChallengebutton.cs" />
      <Compile Include="Assets\MyScripts\GameWinController1.cs" />
-     <Compile Include="Assets\MyScripts\IOS\Tweetbutton.cs" />
+     <Compile Include="Assets\MyScripts\IOS\TwitterandFacebookbutton.cs" />
      <Compile Include="Assets\MyScripts\IOS\iAd.cs" />
      <Compile Include="Assets\MyScripts\Pause\MoveMenuButton.cs" />
      <Compile Include="Assets\MyScripts\Pause\MoveSpacesOnPause.cs" />

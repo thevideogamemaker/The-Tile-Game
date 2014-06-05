@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tweetbutton : MonoBehaviour {
+public class TwitterandFacebookbutton : MonoBehaviour {
+
+	public string website;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,6 @@ public class Tweetbutton : MonoBehaviour {
 
 	void OnMouseDown ()
 	{
-		Application.OpenURL ("www.twitter.com");
+		Application.OpenURL (website);
 	}
 }

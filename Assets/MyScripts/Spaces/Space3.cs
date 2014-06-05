@@ -11,7 +11,6 @@ public class Space3 : MonoBehaviour {
 	
 	bool isBeingTouched;
 	public AudioClip clank;
-	Animator anim;
 	
 	public int currentArraySpace;
 	
@@ -22,7 +21,6 @@ public class Space3 : MonoBehaviour {
 	void Start () 
 	{
 		//renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-		anim = GetComponent<Animator> ();
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
 		
@@ -73,13 +71,11 @@ public class Space3 : MonoBehaviour {
 		
 		if(isBeingTouched == true)
 		{
-			anim.SetBool("Switch",true);
+			currentSpace.animation.Play("TileSwitch");
+			downSpace.animation.Play("TileSwitch");
+			leftSpace.animation.Play("TileSwitch");
+			rightSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
-		}
-		
-		if(isBeingTouched == false)
-		{
-			anim.SetBool("Switch",false);
 		}
 	}
 	
