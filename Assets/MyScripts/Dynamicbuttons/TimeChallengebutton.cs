@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class TimeChallengebutton : MonoBehaviour {
-
-	Animator anim;
 	
+
 	// Use this for initialization
 	void Start () 
 	{
-		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -18,7 +16,14 @@ public class TimeChallengebutton : MonoBehaviour {
 	
 	void OnMouseUp ()
 	{
-		anim.SetBool ("Clicked", true);
+		animation.Play ("TimeChallengebutton");
+		StartCoroutine (ChangeLevel ());
+	}
+
+	IEnumerator ChangeLevel ()
+	{
+		float fadeTime = GameObject.Find ("FadeControl").GetComponent<Fading> ().BeginFade (1);
+		yield return new WaitForSeconds(fadeTime);
 		Application.LoadLevel ("Time Challenge");
 	}
 }

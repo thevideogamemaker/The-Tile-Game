@@ -51,8 +51,10 @@
      <Compile Include="Assets\MyScripts\Dynamicbuttons\ClassicsModebutton.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\MenuScript.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayGameScript.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\QuitButton.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Settings.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\TimeChallengebutton.cs" />
+     <Compile Include="Assets\MyScripts\Fading.cs" />
      <Compile Include="Assets\MyScripts\GameWinController1.cs" />
      <Compile Include="Assets\MyScripts\IOS\TwitterandFacebookbutton.cs" />
      <Compile Include="Assets\MyScripts\IOS\iAd.cs" />
