@@ -8,6 +8,7 @@ public class Space13 : MonoBehaviour {
 	public Transform upSpace;
 	public Transform rightSpace;
 	public Transform downSpace;
+	public Transform leftSpace;
 	
 	bool isBeingTouched;
 	public AudioClip clank;
@@ -15,6 +16,7 @@ public class Space13 : MonoBehaviour {
 	public int currentArraySpace;
 	
 	private Space9 S9arraySpace;
+	private Space12 S12arraySpace;
 	private Space14 S14arraySpace;
 	private Space17 S17arraySpace;
 	
@@ -25,6 +27,7 @@ public class Space13 : MonoBehaviour {
 		currentArraySpace = Random.Range (1, 9);
 		
 		S9arraySpace = GameObject.FindGameObjectWithTag ("Space9").GetComponent<Space9> ();
+		S12arraySpace = GameObject.FindGameObjectWithTag ("Space12").GetComponent<Space12> ();
 		S14arraySpace = GameObject.FindGameObjectWithTag ("Space14").GetComponent<Space14> ();
 		S17arraySpace = GameObject.FindGameObjectWithTag ("Space17").GetComponent<Space17> ();
 	}
@@ -71,6 +74,7 @@ public class Space13 : MonoBehaviour {
 		if(isBeingTouched == true)
 		{
 			currentSpace.animation.Play("TileSwitch");
+			leftSpace.animation.Play("TileSwitch");
 			upSpace.animation.Play("TileSwitch");
 			downSpace.animation.Play("TileSwitch");
 			rightSpace.animation.Play("TileSwitch");
@@ -85,6 +89,7 @@ public class Space13 : MonoBehaviour {
 		
 		this.currentArraySpace = currentArraySpace + 1;
 		S9arraySpace.currentArraySpace = S9arraySpace.currentArraySpace + 1;
+		S12arraySpace.currentArraySpace = S12arraySpace.currentArraySpace + 1;
 		S14arraySpace.currentArraySpace = S14arraySpace.currentArraySpace + 1;
 		S17arraySpace.currentArraySpace = S17arraySpace.currentArraySpace + 1;
 		
@@ -103,6 +108,10 @@ public class Space13 : MonoBehaviour {
 		if(S17arraySpace.currentArraySpace == 10)
 		{
 			S17arraySpace.currentArraySpace = 1;
+		}
+		if(S12arraySpace.currentArraySpace == 10)
+		{
+			S12arraySpace.currentArraySpace = 1;
 		}
 		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];

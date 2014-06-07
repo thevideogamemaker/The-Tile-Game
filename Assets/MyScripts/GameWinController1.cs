@@ -22,7 +22,7 @@ public class GameWinController1 : MonoBehaviour {
 	private Space17 S17Texture;
 	private Space18 S18Texture;
 	private Space19 S19Texture;
-	private Space20 S20Texture;
+	//private Space20 S20Texture;
 
 	// Use this for initialization
 	void Start () 
@@ -46,7 +46,7 @@ public class GameWinController1 : MonoBehaviour {
 		S17Texture = GameObject.FindGameObjectWithTag("Space17").GetComponent<Space17>();
 		S18Texture = GameObject.FindGameObjectWithTag("Space18").GetComponent<Space18>();
 		S19Texture = GameObject.FindGameObjectWithTag("Space19").GetComponent<Space19>();
-		S20Texture = GameObject.FindGameObjectWithTag("Space20").GetComponent<Space20>();
+		//S20Texture = GameObject.FindGameObjectWithTag("Space20").GetComponent<Space20>();
 	}
 	
 	// Update is called once per frame
@@ -70,8 +70,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 1 &&
 		   S17Texture.currentArraySpace == 1 &&
 		   S18Texture.currentArraySpace == 1 &&
-		   S19Texture.currentArraySpace == 1 &&
-		   S20Texture.currentArraySpace == 1)
+		   S19Texture.currentArraySpace == 1)
+		   //S20Texture.currentArraySpace == 1)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -93,8 +93,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 2 &&
 		   S17Texture.currentArraySpace == 2 &&
 		   S18Texture.currentArraySpace == 2 &&
-		   S19Texture.currentArraySpace == 2 &&
-		   S20Texture.currentArraySpace == 2)
+		   S19Texture.currentArraySpace == 2)
+		   //S20Texture.currentArraySpace == 2)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -116,8 +116,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 3 &&
 		   S17Texture.currentArraySpace == 3 &&
 		   S18Texture.currentArraySpace == 3 &&
-		   S19Texture.currentArraySpace == 3 &&
-		   S20Texture.currentArraySpace == 3)
+		   S19Texture.currentArraySpace == 3)
+		   //S20Texture.currentArraySpace == 3)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -139,8 +139,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 4 &&
 		   S17Texture.currentArraySpace == 4 &&
 		   S18Texture.currentArraySpace == 4 &&
-		   S19Texture.currentArraySpace == 4 &&
-		   S20Texture.currentArraySpace == 4)
+		   S19Texture.currentArraySpace == 4)
+		   //S20Texture.currentArraySpace == 4)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -162,8 +162,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 5 &&
 		   S17Texture.currentArraySpace == 5 &&
 		   S18Texture.currentArraySpace == 5 &&
-		   S19Texture.currentArraySpace == 5 &&
-		   S20Texture.currentArraySpace == 5)
+		   S19Texture.currentArraySpace == 5)
+		  // S20Texture.currentArraySpace == 5)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -185,8 +185,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 6 &&
 		   S17Texture.currentArraySpace == 6 &&
 		   S18Texture.currentArraySpace == 6 &&
-		   S19Texture.currentArraySpace == 6 &&
-		   S20Texture.currentArraySpace == 6)
+		   S19Texture.currentArraySpace == 6)
+		   //S20Texture.currentArraySpace == 6)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -208,8 +208,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 7 &&
 		   S17Texture.currentArraySpace == 7 &&
 		   S18Texture.currentArraySpace == 7 &&
-		   S19Texture.currentArraySpace == 7 &&
-		   S20Texture.currentArraySpace == 7)
+		   S19Texture.currentArraySpace == 7)
+		   //S20Texture.currentArraySpace == 7)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -231,8 +231,8 @@ public class GameWinController1 : MonoBehaviour {
 		    S16Texture.currentArraySpace == 8 &&
 		    S17Texture.currentArraySpace == 8 &&
 		    S18Texture.currentArraySpace == 8 &&
-		    S19Texture.currentArraySpace == 8 &&
-		    S20Texture.currentArraySpace == 8)
+		    S19Texture.currentArraySpace == 8)
+		   // S20Texture.currentArraySpace == 8)
 		{
 			StartCoroutine (GameWinner ());
 		}
@@ -254,8 +254,8 @@ public class GameWinController1 : MonoBehaviour {
 		   S16Texture.currentArraySpace == 9 &&
 		   S17Texture.currentArraySpace == 9 &&
 		   S18Texture.currentArraySpace == 9 &&
-		   S19Texture.currentArraySpace == 9 &&
-		   S20Texture.currentArraySpace == 9)
+		   S19Texture.currentArraySpace == 9)
+		   //S20Texture.currentArraySpace == 9)
 		{
 			StartCoroutine (GameWinner ());
 		}

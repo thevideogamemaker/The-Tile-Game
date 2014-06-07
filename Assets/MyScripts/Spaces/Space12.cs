@@ -5,18 +5,14 @@ public class Space12 : MonoBehaviour {
 	
 	public Material[] blocks;
 	public Transform currentSpace;
-	public Transform upSpace;
-	public Transform downSpace;
-	public Transform leftSpace;
+	public Transform rightSpace;
 	
 	bool isBeingTouched;
 	public AudioClip clank;
 	
 	public int currentArraySpace;
 	
-	private Space8 S8arraySpace;
-	private Space11 S11arraySpace;
-	private Space16 S16arraySpace;
+	private Space13 S13arraySpace;
 	
 	void Start () 
 	{
@@ -24,9 +20,7 @@ public class Space12 : MonoBehaviour {
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
 		
-		S8arraySpace = GameObject.FindGameObjectWithTag ("Space8").GetComponent<Space8> ();
-		S11arraySpace = GameObject.FindGameObjectWithTag ("Space11").GetComponent<Space11> ();
-		S16arraySpace = GameObject.FindGameObjectWithTag ("Space16").GetComponent<Space16> ();
+		S13arraySpace = GameObject.FindGameObjectWithTag ("Space13").GetComponent<Space13> ();
 	}
 	
 	void Update () 
@@ -71,9 +65,7 @@ public class Space12 : MonoBehaviour {
 		if(isBeingTouched == true)
 		{
 			currentSpace.animation.Play("TileSwitch");
-			upSpace.animation.Play("TileSwitch");
-			downSpace.animation.Play("TileSwitch");
-			leftSpace.animation.Play("TileSwitch");
+			rightSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
 		}
 	}
@@ -84,25 +76,15 @@ public class Space12 : MonoBehaviour {
 		audio.PlayOneShot (clank, 0.5f);
 		
 		this.currentArraySpace = currentArraySpace + 1;
-		S8arraySpace.currentArraySpace = S8arraySpace.currentArraySpace + 1;
-		S11arraySpace.currentArraySpace = S11arraySpace.currentArraySpace + 1;
-		S16arraySpace.currentArraySpace = S16arraySpace.currentArraySpace + 1;
+		S13arraySpace.currentArraySpace = S13arraySpace.currentArraySpace + 1;
 		
 		if(currentArraySpace == 10)
 		{
 			this.currentArraySpace = 1;
 		}
-		if(S8arraySpace.currentArraySpace == 10)
+		if(S13arraySpace.currentArraySpace == 10)
 		{
-			S8arraySpace.currentArraySpace = 1;
-		}
-		if(S11arraySpace.currentArraySpace == 10)
-		{
-			S11arraySpace.currentArraySpace = 1;
-		}
-		if(S16arraySpace.currentArraySpace == 10)
-		{
-			S16arraySpace.currentArraySpace = 1;
+			S13arraySpace.currentArraySpace = 1;
 		}
 		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];

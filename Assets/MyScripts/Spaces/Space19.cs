@@ -6,7 +6,6 @@ public class Space19 : MonoBehaviour {
 	public Material[] blocks;
 	public Transform currentSpace;
 	public Transform upSpace;
-	public Transform rightSpace;
 	public Transform leftSpace;
 	
 	bool isBeingTouched;
@@ -16,7 +15,6 @@ public class Space19 : MonoBehaviour {
 	
 	private Space18 S18arraySpace;
 	private Space15 S15arraySpace;
-	private Space20 S20arraySpace;
 	
 	void Start () 
 	{
@@ -26,7 +24,6 @@ public class Space19 : MonoBehaviour {
 		
 		S18arraySpace = GameObject.FindGameObjectWithTag ("Space18").GetComponent<Space18> ();
 		S15arraySpace = GameObject.FindGameObjectWithTag ("Space15").GetComponent<Space15> ();
-		S20arraySpace = GameObject.FindGameObjectWithTag ("Space20").GetComponent<Space20> ();
 	}
 	
 	void Update () 
@@ -72,7 +69,6 @@ public class Space19 : MonoBehaviour {
 		{
 			currentSpace.animation.Play("TileSwitch");
 			upSpace.animation.Play("TileSwitch");
-			rightSpace.animation.Play("TileSwitch");
 			leftSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
 		}
@@ -86,7 +82,6 @@ public class Space19 : MonoBehaviour {
 		this.currentArraySpace = currentArraySpace + 1;
 		S18arraySpace.currentArraySpace = S18arraySpace.currentArraySpace + 1;
 		S15arraySpace.currentArraySpace = S15arraySpace.currentArraySpace + 1;
-		S20arraySpace.currentArraySpace = S20arraySpace.currentArraySpace + 1;
 		
 		if(currentArraySpace == 10)
 		{
@@ -99,10 +94,6 @@ public class Space19 : MonoBehaviour {
 		if(S15arraySpace.currentArraySpace == 10)
 		{
 			S15arraySpace.currentArraySpace = 1;
-		}
-		if(S20arraySpace.currentArraySpace == 10)
-		{
-			S20arraySpace.currentArraySpace = 1;
 		}
 		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];

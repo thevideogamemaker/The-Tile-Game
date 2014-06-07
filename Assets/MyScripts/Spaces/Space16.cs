@@ -5,28 +5,22 @@ public class Space16 : MonoBehaviour {
 	
 	public Material[] blocks;
 	public Transform currentSpace;
-	public Transform upSpace;
-	public Transform downSpace;
 	public Transform leftSpace;
 	
 	bool isBeingTouched;
 	public AudioClip clank;
 	
 	public int currentArraySpace;
-	
-	private Space12 S12arraySpace;
+
 	private Space15 S15arraySpace;
-	private Space20 S20arraySpace;
 	
 	void Start () 
 	{
 		//renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
-		
-		S12arraySpace = GameObject.FindGameObjectWithTag ("Space12").GetComponent<Space12> ();
+
 		S15arraySpace = GameObject.FindGameObjectWithTag ("Space15").GetComponent<Space15> ();
-		S20arraySpace = GameObject.FindGameObjectWithTag ("Space20").GetComponent<Space20> ();
 	}
 	
 	void Update () 
@@ -71,8 +65,6 @@ public class Space16 : MonoBehaviour {
 		if(isBeingTouched == true)
 		{
 			currentSpace.animation.Play("TileSwitch");
-			upSpace.animation.Play("TileSwitch");
-			downSpace.animation.Play("TileSwitch");
 			leftSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
 		}
@@ -84,25 +76,15 @@ public class Space16 : MonoBehaviour {
 		audio.PlayOneShot (clank, 0.5f);
 		
 		this.currentArraySpace = currentArraySpace + 1;
-		S12arraySpace.currentArraySpace = S12arraySpace.currentArraySpace + 1;
 		S15arraySpace.currentArraySpace = S15arraySpace.currentArraySpace + 1;
-		S20arraySpace.currentArraySpace = S20arraySpace.currentArraySpace + 1;
 		
 		if(currentArraySpace == 10)
 		{
 			this.currentArraySpace = 1;
 		}
-		if(S12arraySpace.currentArraySpace == 10)
-		{
-			S12arraySpace.currentArraySpace = 1;
-		}
 		if(S15arraySpace.currentArraySpace == 10)
 		{
 			S15arraySpace.currentArraySpace = 1;
-		}
-		if(S20arraySpace.currentArraySpace == 10)
-		{
-			S20arraySpace.currentArraySpace = 1;
 		}
 		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];

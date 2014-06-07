@@ -5,17 +5,13 @@ public class Space8 : MonoBehaviour {
 	
 	public Material[] blocks;
 	public Transform currentSpace;
-	public Transform upSpace;
-	public Transform downSpace;
 	public Transform leftSpace;
 	
 	bool isBeingTouched;
 	public AudioClip clank;
 	
 	public int currentArraySpace;
-	
-	private Space4 S4arraySpace;
-	private Space12 S12arraySpace;
+
 	private Space7 S7arraySpace;
 	
 	void Start () 
@@ -23,9 +19,7 @@ public class Space8 : MonoBehaviour {
 		//renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
-		
-		S4arraySpace = GameObject.FindGameObjectWithTag ("Space4").GetComponent<Space4> ();
-		S12arraySpace = GameObject.FindGameObjectWithTag ("Space12").GetComponent<Space12> ();
+
 		S7arraySpace = GameObject.FindGameObjectWithTag ("Space7").GetComponent<Space7> ();
 	}
 	
@@ -71,8 +65,6 @@ public class Space8 : MonoBehaviour {
 		if(isBeingTouched == true)
 		{
 			currentSpace.animation.Play("TileSwitch");
-			upSpace.animation.Play("TileSwitch");
-			downSpace.animation.Play("TileSwitch");
 			leftSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
 		}
@@ -84,21 +76,11 @@ public class Space8 : MonoBehaviour {
 		audio.PlayOneShot (clank, 0.5f);
 		
 		this.currentArraySpace = currentArraySpace + 1;
-		S4arraySpace.currentArraySpace = S4arraySpace.currentArraySpace + 1;
-		S12arraySpace.currentArraySpace = S12arraySpace.currentArraySpace + 1;
 		S7arraySpace.currentArraySpace = S7arraySpace.currentArraySpace + 1;
 		
 		if(currentArraySpace == 10)
 		{
 			this.currentArraySpace = 1;
-		}
-		if(S4arraySpace.currentArraySpace == 10)
-		{
-			S4arraySpace.currentArraySpace = 1;
-		}
-		if(S12arraySpace.currentArraySpace == 10)
-		{
-			S12arraySpace.currentArraySpace = 1;
 		}
 		if(S7arraySpace.currentArraySpace == 10)
 		{

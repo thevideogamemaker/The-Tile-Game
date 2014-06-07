@@ -5,16 +5,14 @@ public class Space4 : MonoBehaviour {
 	
 	public Material[] blocks;
 	public Transform currentSpace;
-	public Transform downSpace;
-	public Transform leftSpace;
+	public Transform rightSpace;
 	
 	bool isBeingTouched;
 	public AudioClip clank;
 	
 	public int currentArraySpace;
 	
-	private Space3 S3arraySpace;
-	private Space8 S8arraySpace;
+	private Space5 S5arraySpace;
 	
 	void Start () 
 	{
@@ -22,8 +20,7 @@ public class Space4 : MonoBehaviour {
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
 
-		S3arraySpace = GameObject.FindGameObjectWithTag ("Space3").GetComponent<Space3> ();
-		S8arraySpace = GameObject.FindGameObjectWithTag ("Space8").GetComponent<Space8> ();
+		S5arraySpace = GameObject.FindGameObjectWithTag ("Space5").GetComponent<Space5> ();
 	}
 	
 	// Update is called once per frame
@@ -69,8 +66,7 @@ public class Space4 : MonoBehaviour {
 		if(isBeingTouched == true)
 		{
 			currentSpace.animation.Play("TileSwitch");
-			downSpace.animation.Play("TileSwitch");
-			leftSpace.animation.Play("TileSwitch");
+			rightSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
 		}
 	}
@@ -81,20 +77,15 @@ public class Space4 : MonoBehaviour {
 		audio.PlayOneShot (clank, 0.5f);
 		
 		this.currentArraySpace = currentArraySpace + 1;
-		S3arraySpace.currentArraySpace = S3arraySpace.currentArraySpace + 1;
-		S8arraySpace.currentArraySpace = S8arraySpace.currentArraySpace + 1;
+		S5arraySpace.currentArraySpace = S5arraySpace.currentArraySpace + 1;
 		
 		if(currentArraySpace == 10)
 		{
 			this.currentArraySpace = 1;
 		}
-		if(S3arraySpace.currentArraySpace == 10)
+		if(S5arraySpace.currentArraySpace == 10)
 		{
-			S3arraySpace.currentArraySpace = 1;
-		}
-		if(S8arraySpace.currentArraySpace == 10)
-		{
-			S8arraySpace.currentArraySpace = 1;
+			S5arraySpace.currentArraySpace = 1;
 		}
 		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];

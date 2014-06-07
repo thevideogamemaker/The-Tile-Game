@@ -6,7 +6,6 @@ public class Space11 : MonoBehaviour {
 	public Material[] blocks;
 	public Transform currentSpace;
 	public Transform upSpace;
-	public Transform rightSpace;
 	public Transform downSpace;
 	public Transform leftSpace;
 	
@@ -16,7 +15,6 @@ public class Space11 : MonoBehaviour {
 	public int currentArraySpace;
 	
 	private Space7 S7arraySpace;
-	private Space12 S12arraySpace;
 	private Space15 S15arraySpace;
 	private Space10 S10arraySpace;
 	
@@ -27,7 +25,6 @@ public class Space11 : MonoBehaviour {
 		currentArraySpace = Random.Range (1, 9);
 		
 		S7arraySpace = GameObject.FindGameObjectWithTag ("Space7").GetComponent<Space7> ();
-		S12arraySpace = GameObject.FindGameObjectWithTag ("Space12").GetComponent<Space12> ();
 		S15arraySpace = GameObject.FindGameObjectWithTag ("Space15").GetComponent<Space15> ();
 		S10arraySpace = GameObject.FindGameObjectWithTag ("Space10").GetComponent<Space10> ();
 	}
@@ -76,7 +73,6 @@ public class Space11 : MonoBehaviour {
 			currentSpace.animation.Play("TileSwitch");
 			upSpace.animation.Play("TileSwitch");
 			downSpace.animation.Play("TileSwitch");
-			rightSpace.animation.Play("TileSwitch");
 			leftSpace.animation.Play("TileSwitch");
 			StartCoroutine(finishanimation());
 		}
@@ -89,7 +85,6 @@ public class Space11 : MonoBehaviour {
 		
 		this.currentArraySpace = currentArraySpace + 1;
 		S7arraySpace.currentArraySpace = S7arraySpace.currentArraySpace + 1;
-		S12arraySpace.currentArraySpace = S12arraySpace.currentArraySpace + 1;
 		S15arraySpace.currentArraySpace = S15arraySpace.currentArraySpace + 1;
 		S10arraySpace.currentArraySpace = S10arraySpace.currentArraySpace + 1;
 		
@@ -100,10 +95,6 @@ public class Space11 : MonoBehaviour {
 		if(S7arraySpace.currentArraySpace == 10)
 		{
 			S7arraySpace.currentArraySpace = 1;
-		}
-		if(S12arraySpace.currentArraySpace == 10)
-		{
-			S12arraySpace.currentArraySpace = 1;
 		}
 		if(S15arraySpace.currentArraySpace == 10)
 		{
