@@ -12,6 +12,7 @@ public class Space15 : MonoBehaviour {
 	
 	bool isBeingTouched;
 	public AudioClip clank;
+	private VolumeToggle Mute;
 	
 	public int currentArraySpace;
 	
@@ -25,6 +26,7 @@ public class Space15 : MonoBehaviour {
 		//renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 9);
+		Mute = GameObject.Find("SoundToggle").GetComponent<VolumeToggle> ();
 		
 		S11arraySpace = GameObject.FindGameObjectWithTag ("Space11").GetComponent<Space11> ();
 		S16arraySpace = GameObject.FindGameObjectWithTag ("Space16").GetComponent<Space16> ();
@@ -85,7 +87,14 @@ public class Space15 : MonoBehaviour {
 	void OnMouseDown ()
 	{
 		isBeingTouched = true;
-		audio.PlayOneShot (clank, 0.5f);
+		if(Mute.IsMuted == false)
+		{
+			audio.PlayOneShot (clank, 0.5f);
+		}
+		else
+		{
+			audio.PlayOneShot (clank, 0f);
+		}
 		
 		this.currentArraySpace = currentArraySpace + 1;
 		S11arraySpace.currentArraySpace = S11arraySpace.currentArraySpace + 1;

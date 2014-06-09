@@ -6,6 +6,7 @@ public class Pausebutton : MonoBehaviour {
 	public bool isPaused;
 	public GameObject pauseMenu;
 	public Transform theCamera;
+	public Transform soundtoggle;
 
 	void Start () 
 	{
@@ -31,7 +32,7 @@ public class Pausebutton : MonoBehaviour {
 		{
 			Time.timeScale = 0;
 			isPaused = true;
-			Instantiate(pauseMenu, new Vector3(1.716383f,1.838016f,0.8582392f), Quaternion.identity);
+			Instantiate(pauseMenu, new Vector3(1.424252f,1.838016f,0.8582392f), Quaternion.identity);
 		}
 		else
 		{

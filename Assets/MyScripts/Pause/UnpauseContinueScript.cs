@@ -3,15 +3,15 @@ using System.Collections;
 
 public class UnpauseContinueScript : MonoBehaviour 
 {
-	private Pausebutton isPausedOrNah;
+	private Pausebutton isPausedorisnt;
 
 	void Start()
 	{
-		isPausedOrNah = GameObject.FindGameObjectWithTag ("MenuButton").GetComponent<Pausebutton> ();
+		isPausedorisnt = GameObject.FindGameObjectWithTag ("MenuButton").GetComponent<Pausebutton> ();
 	}
 
 	void OnMouseDown ()
 	{
-		isPausedOrNah.isPaused = false;
+		isPausedorisnt.isPaused = false;
 	}
 }

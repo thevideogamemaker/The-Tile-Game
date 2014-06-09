@@ -17,11 +17,11 @@ public class MoveSpacesOnPause : MonoBehaviour {
 	{
 		if(isPausedOrNah.isPaused == true)
 		{
-			transform.position = new Vector3(4.002988f,9.962639f,1.50773f);
+			transform.position = new Vector3(0.6022871f,13.94497f,0f);
 		}
 		else if(isPausedOrNah.isPaused == false)
 		{
-			transform.position = new Vector3(4.002988f,-0.2789307f,1.50773f);
+			transform.position = new Vector3(0.6022871f,2.554543f,0f);
 			Time.timeScale = 1;
 		}
 	}

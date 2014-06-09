@@ -51,6 +51,7 @@
      <Compile Include="Assets\MyScripts\Dynamicbuttons\ClassicsModebutton.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\MenuScript.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayGameScript.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\Quit.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\QuitButton.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Settings.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\TimeChallengebutton.cs" />
@@ -83,6 +84,21 @@
      <Compile Include="Assets\MyScripts\Spaces\Space7.cs" />
      <Compile Include="Assets\MyScripts\Spaces\Space8.cs" />
      <Compile Include="Assets\MyScripts\Spaces\Space9.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\eight.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\eleven.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\fifteen.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\five.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\four.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\fourteen.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\nine.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\one.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\seven.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\six.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\ten.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\thirteen.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\three.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\twelve.cs" />
+     <Compile Include="Assets\MyScripts\Spaces2\two.cs" />
      <Compile Include="Assets\MyScripts\Textures\ChangeTexturebottommiddle.cs" />
      <Compile Include="Assets\MyScripts\Textures\ChangeTextureinsidefours.cs" />
      <Compile Include="Assets\MyScripts\Textures\ChangeTextureleftbottomcorner.cs" />
@@ -93,6 +109,7 @@
      <Compile Include="Assets\MyScripts\Textures\ChangeTexturerighttopcorner1.cs" />
      <Compile Include="Assets\MyScripts\Textures\ChangeTexturetopmiddle.cs" />
      <Compile Include="Assets\MyScripts\TimeChallengeTimer.cs" />
+     <Compile Include="Assets\MyScripts\VolumeToggle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
