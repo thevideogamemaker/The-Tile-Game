@@ -3,7 +3,19 @@ using System.Collections;
 
 public class QuitButton : MonoBehaviour {
 
-	void OnMouseUp()
+	public string scene;
+
+	void Start ()
+	{
+
+	}
+
+	void Update () 
+	{
+		
+	}
+
+	void OnMouseDown()
 	{
 		StartCoroutine (ChangeLevel ());
 	}
@@ -12,6 +24,6 @@ public class QuitButton : MonoBehaviour {
 	{
 		float fadeTime = GameObject.Find ("FadeControl").GetComponent<Fading> ().BeginFade (1);
 		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel ("Main Menu");
+		Application.LoadLevel (scene);
 	}
 }

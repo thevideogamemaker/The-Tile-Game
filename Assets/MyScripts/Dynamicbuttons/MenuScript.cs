@@ -18,6 +18,7 @@ public class MenuScript : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		this.animation.Play ("Backbutton");
 		StartCoroutine (ChangeLevel ());
 	}
 

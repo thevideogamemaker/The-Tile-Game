@@ -49,7 +49,9 @@
      <Compile Include="Assets\MyScripts\CountUPtimer.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Backbutton.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\ClassicsModebutton.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\MainMenu.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\MenuScript.cs" />
+     <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayAgain.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayGameScript.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Quit.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\QuitButton.cs" />
@@ -99,15 +101,6 @@
      <Compile Include="Assets\MyScripts\Spaces2\three.cs" />
      <Compile Include="Assets\MyScripts\Spaces2\twelve.cs" />
      <Compile Include="Assets\MyScripts\Spaces2\two.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTexturebottommiddle.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTextureinsidefours.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTextureleftbottomcorner.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTextureleftside1.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTexturelefttopcorner.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTexturerightbottomcorner1.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTexturerightside.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTexturerighttopcorner1.cs" />
-     <Compile Include="Assets\MyScripts\Textures\ChangeTexturetopmiddle.cs" />
      <Compile Include="Assets\MyScripts\TimeChallengeTimer.cs" />
      <Compile Include="Assets\MyScripts\VolumeToggle.cs" />
   </ItemGroup>

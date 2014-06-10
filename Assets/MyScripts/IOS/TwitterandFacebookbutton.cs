@@ -7,7 +7,7 @@ public class TwitterandFacebookbutton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -17,6 +17,6 @@ public class TwitterandFacebookbutton : MonoBehaviour {
 
 	void OnMouseDown ()
 	{
-		Application.OpenURL (website);
+
 	}
 }

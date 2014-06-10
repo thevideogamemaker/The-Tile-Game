@@ -3,8 +3,13 @@ using System.Collections;
 
 public class Quit : MonoBehaviour {
 
+	void Start ()
+	{
+	}
+
 	void OnMouseUp()
 	{
+		Time.timeScale = 1;
 		StartCoroutine (ChangeLevel ());
 	}
 	
