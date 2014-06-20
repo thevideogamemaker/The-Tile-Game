@@ -21,7 +21,6 @@ public class eight : MonoBehaviour {
 	
 	void Start () 
 	{
-		//renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 		isBeingTouched = false;
 		currentArraySpace = Random.Range (1, 4);
 		Mute = GameObject.Find("SoundToggle").GetComponent<VolumeToggle> ();
@@ -76,12 +75,12 @@ public class eight : MonoBehaviour {
 		{
 			audio.PlayOneShot (clank, 0f);
 		}
-		
-		this.currentArraySpace = currentArraySpace + 1;
-		S11arraySpace.currentArraySpace = S11arraySpace.currentArraySpace + 1;
-		S9arraySpace.currentArraySpace = S9arraySpace.currentArraySpace + 1;
-		S6arraySpace.currentArraySpace = S6arraySpace.currentArraySpace + 1;
-		
+
+		this.currentArraySpace += 1;
+		S11arraySpace.currentArraySpace += 1;
+		S9arraySpace.currentArraySpace += 1;
+		S6arraySpace.currentArraySpace += 1;
+
 		if(currentArraySpace == 4)
 		{
 			this.currentArraySpace = 1;
@@ -98,10 +97,6 @@ public class eight : MonoBehaviour {
 		{
 			S6arraySpace.currentArraySpace = 1;
 		}
-		//currentSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-		//rightSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-		//upSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
-		//leftSpace.renderer.material = blocks[Random.Range(1,blocks.GetLength(0))];
 	}
 	
 	IEnumerator finishanimation ()

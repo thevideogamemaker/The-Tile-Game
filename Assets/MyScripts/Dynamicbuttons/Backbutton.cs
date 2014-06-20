@@ -4,17 +4,7 @@ using System.Collections;
 public class Backbutton : MonoBehaviour {
 	
 	public string scene;
-	
-	// Use this for initialization
-	void Start () 
-	{
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
+
 	void OnMouseUp ()
 	{
 		animation.Play ("Backbutton");

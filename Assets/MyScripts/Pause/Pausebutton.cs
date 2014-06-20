@@ -32,7 +32,7 @@ public class Pausebutton : MonoBehaviour {
 		{
 			Time.timeScale = 0;
 			isPaused = true;
-			Instantiate(pauseMenu, new Vector3(1.424252f,1.838016f,0.8582392f), Quaternion.identity);
+			Instantiate(pauseMenu, new Vector3(1.424252f,2.295339f,0.8582392f), Quaternion.identity);
 		}
 		else
 		{

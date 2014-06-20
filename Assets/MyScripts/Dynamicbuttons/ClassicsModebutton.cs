@@ -2,18 +2,7 @@
 using System.Collections;
 
 public class ClassicsModebutton : MonoBehaviour {
-	
 
-	// Use this for initialization
-	void Start () 
-	{
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
 	void OnMouseUp ()
 	{
 		animation.Play ("ClassicModebutton");

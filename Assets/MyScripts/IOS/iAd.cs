@@ -7,7 +7,7 @@ public class iAd : MonoBehaviour {
 	
 	void Start() 
 	{ 
-		banner = new ADBannerView(ADBannerView.Type.Banner, ADBannerView.Layout.Top); 
+		banner = new ADBannerView(ADBannerView.Type.Banner, ADBannerView.Layout.Bottom); 
 		ADBannerView.onBannerWasClicked += OnBannerClicked; 
 		ADBannerView.onBannerWasLoaded += OnBannerLoaded; 
 	}

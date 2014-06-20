@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GameWinController1 : MonoBehaviour {
 
+	public bool GameWon = false;
+
 	private one S1Texture;
 	private two S2Texture;
 	private three S3Texture;
@@ -18,9 +20,7 @@ public class GameWinController1 : MonoBehaviour {
 	private thirteen S13Texture;
 	private fourteen S14Texture;
 	private fifteen S15Texture;
-	//private Space20 S20Texture;
-
-	// Use this for initialization
+	
 	void Start () 
 	{
 		S1Texture = GameObject.FindGameObjectWithTag("Space1").GetComponent<one>();
@@ -39,8 +39,7 @@ public class GameWinController1 : MonoBehaviour {
 		S14Texture = GameObject.FindGameObjectWithTag("Space14").GetComponent<fourteen>();
 		S15Texture = GameObject.FindGameObjectWithTag("Space15").GetComponent<fifteen>();
 	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
 		if(S1Texture.currentArraySpace == 1 && 
@@ -209,8 +208,8 @@ public class GameWinController1 : MonoBehaviour {
 
 	IEnumerator GameWinner ()
 	{
+		GameWon = true;
 		yield return new WaitForSeconds(1.45f);
 		Application.LoadLevel("GameWon");
 	}
-
 }
