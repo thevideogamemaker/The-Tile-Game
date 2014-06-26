@@ -4,7 +4,7 @@ using UnityEngine.SocialPlatforms.GameCenter;
 
 public class GameCenter : MonoBehaviour {
 	
-	void OnMouseDown ()
+	void OnTouchDown ()
 	{
 		Social.ShowLeaderboardUI();
 	}

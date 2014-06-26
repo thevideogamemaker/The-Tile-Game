@@ -10,7 +10,7 @@ public class UnpauseContinueScript : MonoBehaviour
 		isPausedorisnt = GameObject.FindGameObjectWithTag ("MenuButton").GetComponent<Pausebutton> ();
 	}
 
-	void OnMouseDown ()
+	void OnTouchDown ()
 	{
 		isPausedorisnt.isPaused = false;
 	}

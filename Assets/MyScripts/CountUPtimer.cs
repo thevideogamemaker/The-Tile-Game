@@ -18,24 +18,24 @@ public class CountUPtimer : MonoBehaviour {
 	{
 		if(wins.GameWon == false)
 		{
-		if(Seconds > 59)
-		{
-			Minutes ++;
-			Seconds = 0;
-		}
+			if(Seconds > 59)
+			{
+				Minutes ++;
+				Seconds = 0;
+			}
 
-		GameObject.Find("Timer").guiText.text = "Time: " + Minutes.ToString("f0") + ":0" + Seconds.ToString("f0");
-
-		Seconds += Time.deltaTime;
-
-		if(Mathf.Round(Seconds) <= 9)
-		{
 			GameObject.Find("Timer").guiText.text = "Time: " + Minutes.ToString("f0") + ":0" + Seconds.ToString("f0");
-		}
-		else
-		{
-			GameObject.Find("Timer").guiText.text = "Time: " + Minutes.ToString("f0") + ":" + Seconds.ToString("f0");
-		}
+
+			Seconds += Time.deltaTime;
+
+			if(Mathf.Round(Seconds) <= 9)
+			{
+				GameObject.Find("Timer").guiText.text = "Time: " + Minutes.ToString("f0") + ":0" + Seconds.ToString("f0");
+			}
+			else
+			{
+				GameObject.Find("Timer").guiText.text = "Time: " + Minutes.ToString("f0") + ":" + Seconds.ToString("f0");
+			}
 		}
 		else
 		{

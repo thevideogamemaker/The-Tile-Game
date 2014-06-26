@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Facebookbutton : MonoBehaviour {
 
-	void OnMouseDown ()
+	void OnTouchDown ()
 	{
 		Application.CaptureScreenshot("TheTileGame");
 		Application.OpenURL("https://Facebook.com");

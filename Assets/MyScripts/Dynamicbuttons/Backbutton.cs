@@ -5,7 +5,7 @@ public class Backbutton : MonoBehaviour {
 	
 	public string scene;
 
-	void OnMouseUp ()
+	void OnTouchUp ()
 	{
 		animation.Play ("Backbutton");
 		StartCoroutine (ChangeLevel ());

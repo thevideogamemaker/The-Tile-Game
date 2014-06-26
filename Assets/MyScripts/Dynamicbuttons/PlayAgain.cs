@@ -5,7 +5,7 @@ public class PlayAgain : MonoBehaviour {
 	
 	public string Scene;
 
-	void OnMouseDown()
+	void OnTouchUp()
 	{
 		animation.Play ("PlayAgain");
 		StartCoroutine (ChangeLevel ());

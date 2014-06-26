@@ -14,7 +14,8 @@ public class PauseMenuDestroy : MonoBehaviour {
 	{
 		if(isPausedOrIsNot.isPaused == false)
 		{
-			Destroy(this.gameObject);
+			transform.position = new Vector3(21.92335f,transform.position.y,transform.position.z);
+			isPausedOrIsNot.spawned = false;
 		}
 	}
 }

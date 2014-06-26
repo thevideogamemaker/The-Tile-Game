@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 
-	void OnMouseDown()
+	void OnTouchUp()
 	{
 		this.animation.Play ("MainMenu");
 		StartCoroutine (ChangeLevel ());

@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Twitterbutton : MonoBehaviour {
 
-	void OnMouseDown ()
+	void OnTouchDown ()
 	{
 		Application.CaptureScreenshot("TheTileGame");
-		Application.OpenURL("https://twitter.com");
+		Application.OpenURL("https://.twitter.com");
 	}
 }	

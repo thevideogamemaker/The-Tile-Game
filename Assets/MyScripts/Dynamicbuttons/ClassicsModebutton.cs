@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ClassicsModebutton : MonoBehaviour {
 
-	void OnMouseUp ()
+	void OnTouchUp ()
 	{
 		animation.Play ("ClassicModebutton");
 		StartCoroutine (ChangeLevel ());

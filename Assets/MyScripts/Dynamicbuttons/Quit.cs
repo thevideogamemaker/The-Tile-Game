@@ -5,7 +5,7 @@ public class Quit : MonoBehaviour {
 
 	public bool quitted = false;
 
-	void OnMouseUp()
+	void OnTouchDown ()
 	{
 		Time.timeScale = 1;
 		StartCoroutine (ChangeLevel ());

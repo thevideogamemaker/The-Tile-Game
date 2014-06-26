@@ -7,37 +7,46 @@ public class Pausebutton : MonoBehaviour {
 	public GameObject pauseMenu;
 	public Transform theCamera;
 	public Transform soundtoggle;
+	[HideInInspector]
+	public bool spawned;
+	public bool MenuIsOnScreen = false;
 
 	void Start () 
 	{
 		isPaused = false;
 	}
 
-	void OnMouseDown () 
-	{
-		Pause ();
-	}
-
-	void FixedUpdate ()
-	{
-		if(isPaused == true)
-		{
-			Instantiate(pauseMenu,theCamera.position,Quaternion.identity);
-		}
-	}
-
-	void Pause ()
+	void OnTouchDown () 
 	{
 		if(Time.timeScale == 1)
 		{
 			Time.timeScale = 0;
 			isPaused = true;
-			Instantiate(pauseMenu, new Vector3(1.424252f,2.295339f,0.8582392f), Quaternion.identity);
 		}
 		else
 		{
 			Time.timeScale = 1;
 			isPaused = false;
+		}
+	}
+
+	void Update ()
+	{
+		if(isPaused == true && spawned == false)
+		{
+			if(MenuIsOnScreen == false)
+			{
+				Instantiate(pauseMenu, new Vector3(5.488507f,-0.2448015f,1.466759f), Quaternion.identity);
+				spawned = true;
+				MenuIsOnScreen = true;
+			}
+
+			if(MenuIsOnScreen == true)
+			{
+
+				pauseMenu.transform.position = new Vector3(5.488507f,-0.2448015f,1.466759f);
+				spawned = true;
+			}
 		}
 	}
 }

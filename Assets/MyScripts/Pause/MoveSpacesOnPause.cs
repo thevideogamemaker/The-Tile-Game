@@ -3,21 +3,21 @@ using System.Collections;
 
 public class MoveSpacesOnPause : MonoBehaviour {
 
-	private Pausebutton isPausedOrNah;
+	private Pausebutton isPausedOrIsNot;
 	public GameObject Menu;
 
 	void Start () 
 	{
-		isPausedOrNah = GameObject.FindGameObjectWithTag ("MenuButton").GetComponent<Pausebutton> ();	
+		isPausedOrIsNot = GameObject.FindGameObjectWithTag ("MenuButton").GetComponent<Pausebutton> ();	
 	}
 
 	void Update () 
 	{
-		if(isPausedOrNah.isPaused == true)
+		if(isPausedOrIsNot.isPaused == true)
 		{
 			transform.position = new Vector3(0.6022871f,13.94497f,0f);
 		}
-		else if(isPausedOrNah.isPaused == false)
+		else if(isPausedOrIsNot.isPaused == false)
 		{
 			transform.position = new Vector3(0.6704106f,2.707915f,0f);
 			Time.timeScale = 1;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TimeChallengebutton : MonoBehaviour {
 	
-	void OnMouseUp ()
+	void OnTouchUp ()
 	{
 		animation.Play ("TimeChallengebutton");
 		StartCoroutine (ChangeLevel ());

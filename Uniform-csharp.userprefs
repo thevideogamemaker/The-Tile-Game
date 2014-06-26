@@ -1,0 +1,27 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyScripts/Pause/Pausebutton.cs">
+    <Files>
+      <File FileName="Assets/MyScripts/Pause/Pausebutton.cs" Line="46" Column="5" />
+      <File FileName="Assets/MyScripts/Pause/PauseMenuDestroy.cs" Line="19" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp-vs" expanded="True">
+            <Node name="MyScripts" expanded="True">
+              <Node name="IOS" expanded="True" />
+              <Node name="Pause" expanded="True">
+                <Node name="Pausebutton.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

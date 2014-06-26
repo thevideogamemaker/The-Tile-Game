@@ -74,7 +74,7 @@ public class six : MonoBehaviour {
 		}
 	}
 	
-	void OnMouseDown ()
+	void OnTouchDown ()
 	{
 		isBeingTouched = true;
 		if(Mute.IsMuted == false)

@@ -59,6 +59,7 @@
      <Compile Include="Assets\MyScripts\GameWinController1.cs" />
      <Compile Include="Assets\MyScripts\IOS\Facebookbutton.cs" />
      <Compile Include="Assets\MyScripts\IOS\GameCenter.cs" />
+     <Compile Include="Assets\MyScripts\IOS\TouchInput.cs" />
      <Compile Include="Assets\MyScripts\IOS\Twitterbutton.cs" />
      <Compile Include="Assets\MyScripts\IOS\iAd.cs" />
      <Compile Include="Assets\MyScripts\Pause\MoveMenuButton.cs" />

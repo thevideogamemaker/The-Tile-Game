@@ -64,7 +64,7 @@ public class eight : MonoBehaviour {
 		}
 	}
 	
-	void OnMouseDown ()
+	void OnTouchDown ()
 	{
 		isBeingTouched = true;
 		if(Mute.IsMuted == false)
@@ -98,7 +98,7 @@ public class eight : MonoBehaviour {
 			S6arraySpace.currentArraySpace = 1;
 		}
 	}
-	
+
 	IEnumerator finishanimation ()
 	{
 		yield return new WaitForSeconds(0.4f);

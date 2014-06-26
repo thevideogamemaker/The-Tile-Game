@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Settings : MonoBehaviour {
 
-	void OnMouseUp ()
+	void OnTouchUp ()
 	{
 		animation.Play ("Settings");
 		StartCoroutine (ChangeLevel ());
