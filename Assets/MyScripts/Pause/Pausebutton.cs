@@ -43,8 +43,7 @@ public class Pausebutton : MonoBehaviour {
 
 			if(MenuIsOnScreen == true)
 			{
-
-				pauseMenu.transform.position = new Vector3(5.488507f,-0.2448015f,1.466759f);
+				GameObject.FindGameObjectWithTag("PauseMenu").transform.position = new Vector3(5.488507f,-0.2448015f,1.466759f);
 				spawned = true;
 			}
 		}
