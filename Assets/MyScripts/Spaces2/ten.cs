@@ -22,7 +22,7 @@ public class ten : MonoBehaviour {
 	void Start () 
 	{
 		isBeingTouched = false;
-		currentArraySpace = Random.Range (1, 4);
+		currentArraySpace = Random.Range (1, 5);
 		Mute = GameObject.Find("SoundToggle").GetComponent<VolumeToggle> ();
 		
 		S12arraySpace = GameObject.FindGameObjectWithTag("Space12").GetComponent<twelve> ();
@@ -45,6 +45,10 @@ public class ten : MonoBehaviour {
 		{
 			currentSpace.renderer.material = blocks[3];
 		}
+		if(currentArraySpace == 4)
+		{
+			currentSpace.renderer.material = blocks[4];
+		}
 		
 		if(isBeingTouched == true)
 		{
@@ -55,7 +59,7 @@ public class ten : MonoBehaviour {
 			StartCoroutine(finishanimation());
 		}
 		
-		if(currentArraySpace == 4)
+		if(currentArraySpace == 5)
 		{
 			this.currentArraySpace = 1;
 			S12arraySpace.currentArraySpace = 1;
@@ -81,19 +85,19 @@ public class ten : MonoBehaviour {
 		S7arraySpace.currentArraySpace += 1;
 		S9arraySpace.currentArraySpace += 1;
 		
-		if(currentArraySpace == 4)
+		if(currentArraySpace == 5)
 		{
 			this.currentArraySpace = 1;
 		}
-		if(S12arraySpace.currentArraySpace == 4)
+		if(S12arraySpace.currentArraySpace == 5)
 		{
 			S12arraySpace.currentArraySpace = 1;
 		}
-		if(S7arraySpace.currentArraySpace == 4)
+		if(S7arraySpace.currentArraySpace == 5)
 		{
 			S7arraySpace.currentArraySpace = 1;
 		}
-		if(S9arraySpace.currentArraySpace == 4)
+		if(S9arraySpace.currentArraySpace == 5)
 		{
 			S9arraySpace.currentArraySpace = 1;
 		}

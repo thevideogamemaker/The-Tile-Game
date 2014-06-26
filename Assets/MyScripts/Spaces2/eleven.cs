@@ -26,7 +26,7 @@ public class eleven : MonoBehaviour {
 	void Start () 
 	{
 		isBeingTouched = false;
-		currentArraySpace = Random.Range (1, 4);
+		currentArraySpace = Random.Range (1, 5);
 		Mute = GameObject.Find("SoundToggle").GetComponent<VolumeToggle> ();
 		
 		S8arraySpace = GameObject.FindGameObjectWithTag ("Space8").GetComponent<eight> ();
@@ -51,6 +51,10 @@ public class eleven : MonoBehaviour {
 		{
 			currentSpace.renderer.material = blocks[3];
 		}
+		if(currentArraySpace == 4)
+		{
+			currentSpace.renderer.material = blocks[4];
+		}
 		
 		if(isBeingTouched == true)
 		{
@@ -63,7 +67,7 @@ public class eleven : MonoBehaviour {
 			StartCoroutine(finishanimation());
 		}
 		
-		if(currentArraySpace == 4)
+		if(currentArraySpace == 5)
 		{
 			this.currentArraySpace = 1;
 			S8arraySpace.currentArraySpace = 1;
@@ -93,27 +97,27 @@ public class eleven : MonoBehaviour {
 		S13arraySpace.currentArraySpace += 1;
 		S14arraySpace.currentArraySpace += 1;
 		
-		if(currentArraySpace == 4)
+		if(currentArraySpace == 5)
 		{
 			this.currentArraySpace = 1;
 		}
-		if(S8arraySpace.currentArraySpace == 4)
+		if(S8arraySpace.currentArraySpace == 5)
 		{
 			S8arraySpace.currentArraySpace = 1;
 		}
-		if(S9arraySpace.currentArraySpace == 4)
+		if(S9arraySpace.currentArraySpace == 5)
 		{
 			S9arraySpace.currentArraySpace = 1;
 		}
-		if(S12arraySpace.currentArraySpace == 4)
+		if(S12arraySpace.currentArraySpace == 5)
 		{
 			S12arraySpace.currentArraySpace = 1;
 		}
-		if(S13arraySpace.currentArraySpace == 4)
+		if(S13arraySpace.currentArraySpace == 5)
 		{
 			S13arraySpace.currentArraySpace = 1;
 		}
-		if(S14arraySpace.currentArraySpace == 4)
+		if(S14arraySpace.currentArraySpace == 5)
 		{
 			S14arraySpace.currentArraySpace = 1;
 		}
