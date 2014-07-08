@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Backbutton : MonoBehaviour {
 	
-	public string scene;
-
 	void OnTouchUp ()
 	{
 		animation.Play ("Backbutton");
@@ -15,6 +13,6 @@ public class Backbutton : MonoBehaviour {
 	{
 		float fadeTime = GameObject.Find ("FadeControl").GetComponent<Fading> ().BeginFade (1);
 		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel (scene);
+		Application.LoadLevel ("Main Menu");
 	}
 }
