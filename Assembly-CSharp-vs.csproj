@@ -53,7 +53,6 @@
      <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayAgain.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\PlayGameScript.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Quit.cs" />
-     <Compile Include="Assets\MyScripts\Dynamicbuttons\Settings.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\TimeChallengebutton.cs" />
      <Compile Include="Assets\MyScripts\Fading.cs" />
      <Compile Include="Assets\MyScripts\GameWinController1.cs" />

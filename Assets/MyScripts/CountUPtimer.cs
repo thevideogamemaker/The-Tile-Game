@@ -43,18 +43,18 @@ public class CountUPtimer : MonoBehaviour {
 			Seconds = Seconds * Time.deltaTime;
 		}
 
-		if(Application.loadedLevel == 5 && wins.GameWon == true)
+		if(Application.loadedLevel == 4 && wins.GameWon == true)
 		{
 			transform.position = new Vector3(0.2050778f,0.8230979f,0f);
 		}
 
 
-		if(Application.loadedLevel == 3 || Application.loadedLevel == 4 || Application.loadedLevel == 5)
+		if(Application.loadedLevel == 2 || Application.loadedLevel == 4)
 		{
 			DontDestroyOnLoad (guiText);
 		}
 
-		if(Application.loadedLevel == 0 || Application.loadedLevel == 1 || Application.loadedLevel == 6)
+		if(Application.loadedLevel == 0 || Application.loadedLevel == 1 || Application.loadedLevel == 3 || Application.loadedLevel == 5)
 		{
 			Destroy(this.gameObject);
 		}

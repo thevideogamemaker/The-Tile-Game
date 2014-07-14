@@ -16,7 +16,7 @@ public class VolumeToggle : MonoBehaviour {
 		}
 	}
 
-	void OnMouseUp()
+	void OnTouchUp()
 	{
 		if(IsMuted == false)
 		{

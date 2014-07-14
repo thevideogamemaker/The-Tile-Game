@@ -42,7 +42,7 @@ TextureImporter:
   buildTargetSettings:
   - buildTarget: iPhone
     maxTextureSize: 512
-    textureFormat: -2
+    textureFormat: -1
     compressionQuality: 50
   spriteSheet:
     sprites: []
