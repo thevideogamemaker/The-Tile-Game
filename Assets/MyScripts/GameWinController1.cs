@@ -40,7 +40,12 @@ public class GameWinController1 : MonoBehaviour {
 		S15Texture = GameObject.FindGameObjectWithTag("Space15").GetComponent<fifteen>();
 	}
 
-	void Update () 
+	void FixedUpdate ()
+	{
+		CheckIfWinning();
+	}
+
+	void CheckIfWinning () 
 	{
 		if(S1Texture.currentArraySpace == 1 && 
 		   S2Texture.currentArraySpace == 1 && 

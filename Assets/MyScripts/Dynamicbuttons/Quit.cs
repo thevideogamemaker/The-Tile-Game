@@ -8,13 +8,11 @@ public class Quit : MonoBehaviour {
 	void OnTouchDown ()
 	{
 		Time.timeScale = 1;
-		StartCoroutine (ChangeLevel ());
 	}
-	
-	IEnumerator ChangeLevel ()
+
+	IEnumerator changelevel ()
 	{
-		quitted = true;
-		float fadeTime = GameObject.Find ("FadeControl").GetComponent<Fading> ().BeginFade (1);
+		float fadeTime = GameObject.Find("FadeControl").GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds(fadeTime);
 		Application.LoadLevel ("Main Menu");
 	}

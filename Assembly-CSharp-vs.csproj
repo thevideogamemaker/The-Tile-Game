@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{E4E29F54-6986-ACA5-5A31-182E215A2DEA}</ProjectGuid>
+	<ProjectGuid>{C07265BC-ED18-314A-8078-516387189D26}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MyScripts\Controller.cs" />
      <Compile Include="Assets\MyScripts\CountUPtimer.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\Backbutton.cs" />
      <Compile Include="Assets\MyScripts\Dynamicbuttons\ClassicsModebutton.cs" />

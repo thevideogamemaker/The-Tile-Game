@@ -58,14 +58,6 @@ public class five : MonoBehaviour {
 			topleftSpace.animation.Play("Hexagonflip");
 			StartCoroutine(finishanimation());
 		}
-		
-		if(currentArraySpace == 5)
-		{
-			this.currentArraySpace = 1;
-			S2arraySpace.currentArraySpace = 1;
-			S7arraySpace.currentArraySpace = 1;
-			S4arraySpace.currentArraySpace = 1;
-		}
 	}
 	
 	void OnTouchDown ()
